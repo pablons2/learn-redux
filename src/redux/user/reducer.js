@@ -5,15 +5,16 @@ const initialState = {
 }
 
 const userReducer = (state = initialState, action) => {
-    if (action.type === UserActionTypes.LOGIN) {
-        // action.qualquercoisa
-        return { ...state, currentUser: action.payload }
-    }
 
-    if( action.type === UserActionTypes.LOGOUT){
-        return { ...state, currentUser: null }
-    }
-    return state;
+  switch (action.type){
+    case UserActionTypes.LOGIN:
+        return { ...state, currentUser: action.payload};
+    
+    case UserActionTypes.LOGOUT:
+        return { ...state, currentUser:null};
+    default:
+        return state;
+  }
 }
 
 export default userReducer;

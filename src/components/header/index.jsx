@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 import {useSelector, useDispatch } from 'react-redux'
 import UserActionTypes from "../../redux/user/action-types";
