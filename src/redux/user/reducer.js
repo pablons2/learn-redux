@@ -10,6 +10,9 @@ const userReducer = (state = initialState, action) => {
         return { ...state, currentUser: action.payload }
     }
 
+    if( action.type === UserActionTypes.LOGOUT){
+        return { ...state, currentUser: null }
+    }
     return state;
 }
 

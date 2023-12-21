@@ -24,12 +24,19 @@ const handleLoginClick = ()=>{
     // qualquercoisa: "qualquer coisa mesmo"
     
   })
+
+}
+const handleLogoutClick = ()=>{
+  dispatch({
+    type: UserActionTypes.LOGOUT
+   
+  })
 }
   return (
     <Styles.Container>
       <Styles.Logo>Redux Shopping</Styles.Logo>
       <Styles.Buttons>
-        {currentUser? <div>Bem vindo, {currentUser.name}</div>  :
+        {currentUser? <div ><span>Bem vindo, <b>{currentUser.name}</b>! </span> <span onClick={handleLogoutClick}>sair</span> </div>  :
         (<div onClick={handleLoginClick}>Login</div>)}
         
         <div onClick={handleCartClick}>Carrinho</div>
