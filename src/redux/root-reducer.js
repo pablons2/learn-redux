@@ -8,4 +8,3 @@ import cartReducer from './cart/reducer';
 const rootReducer = combineReducers({ userReducer, cartReducer });
 export default rootReducer;
 
-// teste
